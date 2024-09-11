@@ -1,7 +1,7 @@
 import { Allotment } from 'allotment';
 import 'allotment/dist/style.css';
 
-const Partition = ({ partition, verticalSplit, horizontalSplit, removePartition }) => {
+const Partition = ({ partition, handleSplitVertical, handleSplitHorizontal, handleRemovePartition }) => {
     const { id, color, splitDirection, children } = partition;
 
     return (
@@ -11,9 +11,9 @@ const Partition = ({ partition, verticalSplit, horizontalSplit, removePartition 
         >
             {!children.length && (
                 <div className='flex gap-3 justify-center items-center h-full p-2'>
-                    <button className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded shadow transition ease-in-out delay-80' onClick={() => verticalSplit(id)}>V</button>
-                    <button className='bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded shadow transition ease-in-out delay-80' onClick={() => horizontalSplit(id)}>H</button>
-                    <button className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded shadow transition ease-in-out delay-80' onClick={() => removePartition(id)}>-</button>
+                    <button className='bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded shadow transition ease-in-out delay-80' onClick={() => handleSplitVertical(id)}>V</button>
+                    <button className='bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded shadow transition ease-in-out delay-80' onClick={() => handleSplitHorizontal(id)}>H</button>
+                    <button className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded shadow transition ease-in-out delay-80' onClick={() => handleRemovePartition(id)}>-</button>
                 </div>
             )}
 
@@ -23,9 +23,9 @@ const Partition = ({ partition, verticalSplit, horizontalSplit, removePartition 
                         <Allotment.Pane key={child.id}>
                             <Partition
                                 partition={child}
-                                verticalSplit={verticalSplit}
-                                horizontalSplit={horizontalSplit}
-                                removePartition={removePartition}
+                                handleSplitVertical={handleSplitVertical}
+                                handleSplitHorizontal={handleSplitHorizontal}
+                                handleRemovePartition={handleRemovePartition}
                             />
                         </Allotment.Pane>
                     ))}

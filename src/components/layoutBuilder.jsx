@@ -32,9 +32,9 @@ const LayoutBuilder = () => {
                     <Allotment.Pane key={partition.id}>
                         <Partition
                             partition={partition}
-                            verticalSplit={handleSplitVertical}
-                            horizontalSplit={handleSplitHorizontal}
-                            removePartition={handleRemovePartition}
+                            handleSplitVertical={handleSplitVertical}
+                            handleSplitHorizontal={handleSplitHorizontal}
+                            handleRemovePartition={handleRemovePartition}
                         />
                     </Allotment.Pane>
                 ))}
