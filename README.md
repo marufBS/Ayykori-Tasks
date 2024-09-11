@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Task Solution of AyyKori
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This React application consists of two separate tasks, each implemented on different pages:
 
-## Available Scripts
+## 1. Recursive Partitioning Layout Builder
 
-In the project directory, you can run:
+The **Recursive Partitioning Layout Builder** allows users to split an initial screen into partitions, either vertically or horizontally. Each partition can be resized, and the following features are included:
 
-### `npm start`
+* **Vertical (V) and Horizontal (H) Splitting**: Each partition can be split vertically or horizontally, with one partition retaining its original color and the new partition receiving a random color.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* **Recursive Splitting**: Any partition created can be further split using the same V and H buttons.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* **Removable Partitions**: Each partition can be removed using a "-" button.
 
-### `npm test`
+* **Resizable Partitions**: All partitions are resizable by dragging their borders.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* **Optional Snap Ratios**: Partitions can snap to 1/4, 1/2, and 3/4 ratios during resizing for better control.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 2. Alphabet Tile Interaction
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The **Alphabet Tile Interaction** feature displays a grid of tiles, each representing a letter of the alphabet (A to Z). It includes the following functionalities:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* **Tile Rendering**: All letters are rendered in a grid layout.
 
-### `npm run eject`
+* **Click Interaction**: Clicking a tile appends the corresponding letter to the outputString displayed below the grid.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* **Consecutive Letter Replacement**: If three consecutive letters in the outputString are identical, they are replaced with an underscore (_), and for more than three consecutive identical letters, the appropriate number of underscores is displayed.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+***
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Technologies Used:
+* React.js
+* CSS Flexbox for layout
+* Allotment.js for resizable partitions
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Running the Application:
+1. Clone the repository.
+2. Install dependencies using `npm install`.
+3. Start the development server with `npm start`.
